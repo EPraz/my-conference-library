@@ -100,4 +100,13 @@ class Conf_Lib_Public {
 
 	}
 
+	public function register_shortcodes(){
+		add_shortcode( 'my-profile-dashboard', array( $this, 'display_dashboard') );
+		
+	}
+
+	public function display_dashboard(){
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/partials/conf-lib-public-display-dashboard.php';
+	}
+
 }
