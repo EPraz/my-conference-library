@@ -173,6 +173,10 @@ class Conf_Lib {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
+		//Adding the shortcodes
+		$this->loader->add_action( 'init', $plugin_public, 'register_shortcodes' );
+		
+
 	}
 
 	/**
