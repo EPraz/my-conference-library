@@ -100,4 +100,27 @@ class Conf_Lib_Admin {
 
 	}
 
+	/**
+	 * Register the settings page for the admin area.
+	 *
+	 * @since    1.0.0
+	 */
+	public function register_settings_page() {
+		// Create our settings page as a submenu page.
+		add_menu_page(
+			'Events',      // page title
+			'Events Library',      // menu title
+			'manage_options',                        // capability
+			'library-plugin',                           // menu_slug
+			array( $this, 'display_admin_page' ),
+			'dashicons-schedule', // callable function
+			10  //position
+		);
+	}
+	
+	public function display_admin_page(){
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/conf-lib-admin-display.php';
+	}
+
+
 }
