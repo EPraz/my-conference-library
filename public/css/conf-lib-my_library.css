@@ -1,0 +1,282 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+ /************************************/
+/* Feature Conference */
+
+.conferences_container {
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 750px;
+    height: 100%;
+    font-family: "Roboto", Sans-serif;
+    /* background-color: #fff; */
+    padding: 25px 20px;
+    /*display: flex;*/
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content:center;
+
+}
+@media only screen and (max-width: 420px) {
+    .conferences_container{
+        padding:10px 0;
+    }
+    .login-widget .logged-in{
+        font-size:18px !important
+        ;
+    }
+}
+
+.conferences_container h2 {
+    box-sizing: border-box;
+    margin: 20px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.6;
+    letter-spacing: .8px;
+}
+
+.conferences_container .conferences_cards {
+    box-sizing: border-box;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: cen; */
+    background: var(--white);
+    /* border: 1px solid #d1d1d1; */
+    /* border: 1px solid var(--light-blue); */
+    border: 1px solid var(--white);
+
+    display: none !important;
+}
+
+.conferences_container .conferences_cards .img_box {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40%;
+}
+
+.conferences_container .conferences_cards .img_box img {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.conferences_container .conferences_cards .content {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 13px;
+    position: relative;
+}
+
+.conferences_container .conferences_cards .svg_sticker {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 10%;
+    fill: #c3c3c3;
+    cursor: pointer;
+}
+
+.conferences_container .conferences_cards .logo {
+    box-sizing: border-box;
+    position: absolute;
+    width: 135px;
+    top: 45%;
+    right: 10%;
+}
+
+.conferences_container .conferences_cards h3 {
+    box-sizing: border-box;
+    line-height: 1;
+    font-size: 18px;
+    margin: 2rem auto;
+}
+
+.conferences_container .conferences_cards .content p {
+    box-sizing: border-box;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #a4a4a4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.conferences_container .conferences_cards .content span {
+    box-sizing: border-box;
+    padding: 0 10px 0 0;
+}
+.conferences_container .conferences_cards .btn_container{
+  width: 100%;
+}
+.conferences_container .conferences_cards a {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    color: #fff;
+    font-size: 12pt;
+    /* background: #d20000; */
+    /* background: #7A93AC; */
+    background: #023050;
+    /* margin-bottom: -30px; */
+    transition: .5s;
+    width: 65%;
+    text-align: center;
+}
+
+.conferences_container .conferences_cards a:hover {
+    /* background: #960303 !important; */
+    background: #023050 !important;
+    transform: scale(1.1) !important;
+}
+.hover:hover {
+  transform: translateY(-6px);
+  animation-name: hover;
+  animation-duration: 1.5s;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.hover:hover:before {
+  opacity: 0.6;
+  transform: translateY(6px);
+  animation-name: shadow;
+  animation-duration: 1.5s;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+
+
+/* List View // Grid View */
+
+  
+.filter-buttons {
+    display: flex;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .list-view-button,
+  .grid-view-button {
+    color: black;
+    border: 1px solid #ededed;
+    padding: 15px 25px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  .list-view-button:hover,
+  .grid-view-button:hover {
+    background: white;
+    color: #0e2439;
+  }
+  
+  .list-view-button {
+    margin-right: 10px;
+  }
+  
+  .list {
+    list-style: none;
+    margin: auto;
+    padding: 0;
+    display: flex;
+  }
+  
+  .li {
+    background-color: #1f364d;
+    border-radius: 3px;
+    /* margin-bottom: 10px; */
+    margin-bottom: 1.2rem;
+    transition: 0.3s;
+  }
+  
+  
+  .list.list-view-filter {
+    flex-direction: column;
+  }
+  
+  .list.list-view-filter .li {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: unset;
+    position: relative;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  .list.list-view-filter .li .img_box{
+    /* flex:0; */
+    height: 100%;
+    width: 100%;
+    flex: .7;
+    position: absolute;
+  }
+  .list.list-view-filter .li .content{
+    flex:0.7;
+    height:100%;
+    background-color: #00000075;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .list.list-view-filter .li .content h3{
+    color:#fff;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .list.list-view-filter .li .content p{
+    font-size: 20px;
+    color: #fff;
+  }
+  .list.list-view-filter .li .content p svg{
+    filter:invert(1);
+  }
+  .list.list-view-filter .li .btn_container{
+    flex:0.3;
+    height: 100%;
+    background-color: #fff;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .list.list-view-filter .li .img_box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* height: 198px; */
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    object-position: 100% 65%;
+  }
+  
+  .list.grid-view-filter {
+    flex-flow: row wrap;
+  }
+  
+  .list.grid-view-filter .li {
+    margin-right: 10px;
+    text-align: center;
+  }

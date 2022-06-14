@@ -3,4 +3,747 @@
  * included in this file.
  */
 
- 
+ @import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
+
+ .wp-site-blocks {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+/* ************************************************* */
+/* ************************************************* */
+/* ************************************************* */
+:root {
+    --darkgray-blue: #023050;
+    --light-blue: #7a93ac ;
+    --white: #fffeff;
+}
+/* ************************************************* */
+/* ************************************************* */
+/* ************************************************* */
+/* // width */
+.main::-webkit-scrollbar { 
+    width: 5px;
+}
+/* // Track */
+.main::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+/* // Handle */
+.main::-webkit-scrollbar-thumb {
+    /* background: lighten(var(--darkgray-blue), 20%); border-radius: 10px; */
+    background: rgba(var(--darkgray-blue), 20%);
+    border-radius: 10px;
+}
+/* // Handle on hover */
+.main::-webkit-scrollbar-thumb:hover {
+    /* background: lighten(var(--darkgray-blue), 10%); */
+    background: rgba(var(--darkgray-blue), 10%);
+}
+/* ************************************************* */
+/* ************************************************* */
+/* ************************************************* */
+/* Menu Lat */
+.menu_lat {
+    width: 57px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* background: lighten($black, 35%); */
+    background: var(--darkgray-blue);
+    /* background: rgba(var(--darkgray-blue), 85%); */
+    /* background: rgba(53,64,82, 5%); */
+    position: fixed;
+    transition: all .5s;
+}
+.menu_lat:hover {
+    width: 200px;
+}
+.menu_lat:hover ul li.menu-heading {
+    opacity: 1;
+    color: var(--light-blue);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.menu_lat ul {
+    padding-left: 0;
+}
+.menu_lat ul li {
+    list-style-type: none;
+}
+.menu_lat ul li.active a  {
+    background-color: #014472;
+}
+.menu_lat ul li.active a:hover {
+    background-color: #015e9c;
+}
+.menu_lat ul li a {
+    display: flex;
+    align-items: center;
+    background-color: var(--darkgray-blue);
+    color: var(--white);
+    padding: 15px 10px;
+    font-size: 13px;
+    width: 200px;
+    border-bottom: rgba(53,64,82, 5%);
+    text-decoration: none;
+}
+.menu_lat ul li a:hover {
+    background-color: #015e9c;
+    text-decoration: none;
+}
+.menu_lat ul li a:hover i.fa {
+    color: rgba(var(--light-blue), 10%);
+}
+.menu_lat ul li a:focus {
+    text-decoration: none;
+}
+.menu_lat ul li a i.fa {
+    width: 50px;
+    text-align: center;
+    padding-right: 15px;
+    transition: all 1s;
+}
+.menu_lat .menu-heading {
+    opacity: 0;
+    padding: 10px 5px 10px 10px;
+    color: darken(yellow, 15%);
+    font-size: smaller;
+    border-bottom: 1px solid var(--darkgray-blue);
+    transition: all .5s;
+}
+
+.menu_lat .change-color {
+    fill: #fffeff;
+    margin-right: 20px;
+    margin-left: 7.5px;
+}
+.menu_lat .black-color {
+    fill: #023050;
+    /* margin-right: 20px; */
+    /* margin-left: 7.5px; */
+}
+/* ************************************************* */
+/* ************************************************* */
+/* ************************************************* */
+
+.cards {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    max-width: 820px;
+    height: fit-content;
+}
+
+.card--1 .card__img,
+.card--1 .card__img--hover {
+    background-image: url('https://www.liveandinvestoverseasconferences.com/wp-content/uploads/2019/11/algarve-cliffs-beach-portugal.png');
+}
+
+.card--2 .card__img,
+.card--2 .card__img--hover {
+    background-image: url('https://www.liveandinvestoverseasconferences.com/wp-content/uploads/2019/05/offshore-wealth.jpg');
+}
+
+.card__like {
+    width: 18px;
+    display: none;
+}
+
+.card__clock {
+    width: 15px;
+    vertical-align: middle;
+    fill: #AD7D52;
+}
+
+.card__time {
+    font-size: 12px;
+    color: #AD7D52;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.card__clock-info {
+    float: right;
+}
+
+.card__img {
+    visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 235px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+
+}
+
+.card__info-hover {
+    position: absolute;
+    padding: 16px;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+}
+
+.card__img--hover {
+    transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    height: 235px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    top: 0;
+
+}
+
+.card {
+    margin-right: 25px;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+    background-color: #fff;
+    /* background-color: #023050; */
+    /* width: 33.3%; */
+    width: 50%;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.10, 1.10);
+}
+
+.card__info {
+    z-index: 2;
+    /* background-color: #fff; */
+    background-color: #023050;
+    color: #fff;
+    height: max-content;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 16px 24px 24px 24px;
+    min-height: 145px;
+}
+
+.card__category {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #868686;
+}
+
+.card__title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.card:hover .card__title {
+    color: #023050;
+}
+
+.card:hover .card__category,
+.card:hover .card__author,
+.card:hover .card__title,
+.card:hover .card__clock-info {
+    font-weight: bold;
+}
+
+.card__by {
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.card__author {
+    font-weight: 600;
+    text-decoration: none;
+    color: #AD7D52;
+}
+
+.card:hover .card__img--hover {
+    height: 100%;
+    opacity: 0.3;
+}
+
+.card:hover .card__info {
+    background-color: transparent;
+    position: relative;
+}
+
+.card:hover .card__info-hover {
+    opacity: 1;
+}
+
+
+/* Feature Conference */
+
+.conferences_container {
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    width: 100%;
+    /* max-width: 750px; */
+    height: 100%;
+    font-family: "Roboto", Sans-serif;
+    /* background-color: #fff; */
+    padding: 25px 20px;
+    /*display: flex;*/
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content:center;
+
+}
+@media only screen and (max-width: 420px) {
+    .conferences_container{
+        padding:10px 0;
+    }
+    .login-widget .logged-in{
+        font-size:18px !important
+        ;
+    }
+}
+
+.conferences_container h2 {
+    box-sizing: border-box;
+    margin: 20px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.6;
+    letter-spacing: .8px;
+}
+
+.conferences_container .conferences_cards {
+    box-sizing: border-box;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: cen; */
+    background: var(--white);
+    /* border: 1px solid #d1d1d1; */
+    /* border: 1px solid var(--light-blue); */
+    border: 1px solid var(--white);
+
+    display: none !important;
+}
+
+.conferences_container .conferences_cards .img_box {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40%;
+}
+
+.conferences_container .conferences_cards .img_box img {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.conferences_container .conferences_cards .content {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 13px;
+    position: relative;
+}
+
+.conferences_container .conferences_cards .svg_sticker {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 10%;
+    fill: #c3c3c3;
+    cursor: pointer;
+}
+
+.conferences_container .conferences_cards .logo {
+    box-sizing: border-box;
+    position: absolute;
+    width: 135px;
+    top: 45%;
+    right: 10%;
+}
+
+.conferences_container .conferences_cards h3 {
+    box-sizing: border-box;
+    line-height: 1;
+    font-size: 18px;
+    margin: 2rem auto;
+}
+
+.conferences_container .conferences_cards .content p {
+    box-sizing: border-box;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #a4a4a4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.conferences_container .conferences_cards .content span {
+    box-sizing: border-box;
+    padding: 0 10px 0 0;
+}
+.conferences_container .conferences_cards .btn_container{
+  width: 100%;
+}
+.conferences_container .conferences_cards a {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    color: #fff;
+    font-size: 12pt;
+    /* background: #d20000; */
+    /* background: #7A93AC; */
+    background: #023050;
+    /* margin-bottom: -30px; */
+    transition: .5s;
+    width: 65%;
+    text-align: center;
+}
+
+.conferences_container .conferences_cards a:hover {
+    /* background: #960303 !important; */
+    background: #023050 !important;
+    transform: scale(1.1) !important;
+}
+.hover:hover {
+  transform: translateY(-6px);
+  animation-name: hover;
+  animation-duration: 1.5s;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.hover:hover:before {
+  opacity: 0.6;
+  transform: translateY(6px);
+  animation-name: shadow;
+  animation-duration: 1.5s;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+
+
+/* List View // Grid View */
+
+  
+.filter-buttons {
+    display: flex;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .list-view-button,
+  .grid-view-button {
+    color: black;
+    border: 1px solid #ededed;
+    padding: 15px 25px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  .list-view-button:hover,
+  .grid-view-button:hover {
+    background: white;
+    color: #0e2439;
+  }
+  
+  .list-view-button {
+    margin-right: 10px;
+  }
+  
+  .list {
+    list-style: none;
+    margin: auto;
+    padding: 0;
+    display: flex;
+  }
+  
+  .li {
+    background-color: #1f364d;
+    border-radius: 3px;
+    /* margin-bottom: 10px; */
+    margin-bottom: 1.2rem;
+    transition: 0.3s;
+  }
+  
+  
+  .list.list-view-filter {
+    flex-direction: column;
+  }
+  
+  .list.list-view-filter .li {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: unset;
+    position: relative;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  .list.list-view-filter .li .img_box{
+    /* flex:0; */
+    height: 100%;
+    width: 100%;
+    flex: .7;
+    position: absolute;
+  }
+  .list.list-view-filter .li .content{
+    flex:0.7;
+    height:100%;
+    background-color: #00000075;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .list.list-view-filter .li .content h3{
+    color:#fff;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .list.list-view-filter .li .content p{
+    font-size: 20px;
+    color: #fff;
+  }
+  .list.list-view-filter .li .content p svg{
+    filter:invert(1);
+  }
+  .list.list-view-filter .li .btn_container{
+    flex:0.3;
+    height: 100%;
+    background-color: #fff;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .list.list-view-filter .li .img_box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* height: 198px; */
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    object-position: 100% 65%;
+  }
+  
+  .list.grid-view-filter {
+    flex-flow: row wrap;
+  }
+  
+  .list.grid-view-filter .li {
+    margin-right: 10px;
+    text-align: center;
+  }
+
+
+  
+ .menu_lat:hover+.container_full {
+    margin-left: 200px;
+}
+
+.container_full {
+transition: all .5s;
+margin-left: 57px;
+/* border: 1px solid red; */
+background-color: aliceblue;
+min-height: 100vh;
+}
+.fade.in {
+opacity: 1 !important;
+}
+.container_full .header {
+background: transparent;
+display: block;
+/* border-bottom: 1px solid var(--darkgray-blue); */
+border-bottom: 1px solid aliceblue;
+padding: 15px 30px;
+background-color: var(--white);
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+/* margin-left: -15px; */
+}
+.container_full #my_library .header h4 {
+display: inline-block;
+color: var(--darkgray-blue);
+}
+
+.container_full #my_library .content_body {
+padding: 0 30px 15px 15px;
+}
+.container_full #my_library .content_body .row {
+margin-top: 20px;
+}
+
+
+
+/* *********************************************** */
+/* *********************************************** */
+/* *********************************************** */
+
+.courses-container {
+/* width: 100%; */
+/* padding: 0.5rem; */
+margin: 0 0.8rem;
+min-width: 616px;
+max-width: 700px;
+flex: 1;
+}
+
+/* .course {
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+display: flex;
+max-width: 100%;
+margin: 20px 10px;
+overflow: hidden;
+width: 645px;
+} */
+
+.course {
+background-color: rgb(255, 255, 255);
+border-radius: 10px;
+box-shadow: rgb(0 0 0 / 20%) 0px 10px 10px;
+display: flex;
+max-width: 100%;
+margin: 20px 10px;
+overflow: hidden;
+/* width: 575px; */
+/* width: 100%; */
+/* min-width: 575px; */
+/* max-width: 700px; */
+flex: 1;
+}
+
+.course h6 {
+/* opacity: 0.6;
+margin: 0;
+letter-spacing: 1px;
+text-transform: uppercase; */
+margin: 0;
+color: #e7eff6;
+letter-spacing: 1px;
+text-transform: uppercase;
+font-weight: inherit;
+}
+
+.course h2 {
+letter-spacing: 1px;
+margin: 10px 0;
+}
+
+.course-preview {
+/* background-color: #2A265F; */
+background-color: var(--darkgray-blue);
+color: var(--white);
+padding: 30px;
+max-width: 250px;
+}
+
+.course-preview a {
+color: var(--white);
+display: inline-block;
+font-size: 12px;
+opacity: 0.6;
+margin-top: 30px;
+text-decoration: none;
+}
+.course-preview a:hover {
+color: #fff;
+/* font-weight: bold; */
+opacity: 1;
+}
+
+.course-info {
+padding: 30px;
+position: relative;
+width: 100%;
+/* background-image: url('https://www.liveandinvestoverseasconferences.com/wp-content/uploads/2019/11/algarve-cliffs-beach-portugal.png'); */
+/* background: linear-gradient( rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.5) ), url('https://www.liveandinvestoverseasconferences.com/wp-content/uploads/2019/11/algarve-cliffs-beach-portugal.png'); */
+color: var(--white);
+font-weight: bold;
+background-position: center center;
+}
+
+.progress-container {
+position: absolute;
+top: 30px;
+right: 30px;
+text-align: right;
+width: 150px;
+}
+
+.progress {
+background-color: #ddd;
+border-radius: 3px;
+height: 5px;
+width: 100%;
+}
+
+.progress::after {
+border-radius: 3px;
+background-color: #2A265F;
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+height: 5px;
+width: 66%;
+}
+
+.progress-text {
+font-size: 10px;
+opacity: 0.6;
+letter-spacing: 1px;
+}
+
+.courses-container .btn {
+background-color: #2A265F;
+border: 0;
+border-radius: 50px;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+color: #fff;
+font-size: 16px;
+padding: 12px 25px;
+position: absolute;
+bottom: 30px;
+right: 30px;
+letter-spacing: 1px;
+transition: .5s;
+}
+
+.courses-container .btn:hover {
+background-color: #fffeff;
+color: var(--darkgray-blue);
+font-weight: bold;
+}
