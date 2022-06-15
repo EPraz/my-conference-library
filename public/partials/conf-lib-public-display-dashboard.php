@@ -17,6 +17,7 @@
 
 <div class="main">
 
+
     <div class="menu_lat">
         <ul>
             <li class="menu-heading">Dashboards</li>
@@ -70,7 +71,7 @@
                         </div>
 
 
-                        <ol class="conferences_container list list-view-filter">
+                        <ol class="conferences_container list list-view-filter ">
                             <div class="conferences_cards hover li">
                                 <div class="img_box">
                                     <img src="https://www.liveandinvestoverseasconferences.com/wp-content/uploads/2019/11/algarve-cliffs-beach-portugal.png"
